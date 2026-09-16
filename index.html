@@ -10,22 +10,27 @@
 <body>
 
     <header>
-        <div class="container">
+    <div class="container header-grid">
+        <div class="header-text">
             <h1>Pál Zsolt</h1>
             <p class="subtitle">Stratégiai és Folyamatfejlesztési Szakértő | Business & Process Analyst</p>
             <p class="tagline">Adatvezérelt folyamatfejlesztés, mikró-automatizációk és akadálymentes digitális transzformáció (Universal Design).</p>
             
             <nav aria-label="Elérhetőségek és Gyorslinkek" class="contact-nav">
                 <ul>
-                    <li><strong>E-mail:</strong> <a href="mailto:zsolt.pal@gmail.com">zsolt.pal@gmail.com</a></li>
-                    <li><strong>Telefon:</strong> <a href="tel:+36202204427">+36 20 220 4427</a></li>
+                    <li><strong>E-mail:</strong> <span id="email-protected"></span></li>
+                    <li><strong>Telefon:</strong> <span id="phone-protected"></span></li>
                     <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/zsolt-pál-39a09867" target="_blank" rel="noopener">linkedin.com/in/zsolt-pál-39a09867</a></li>
                     <li><strong>CV Letöltés:</strong> <a href="assets/cv-pal-zsolt.pdf" class="btn-cv" download>PDF Önéletrajz letöltése</a></li>
                 </ul>
             </nav>
         </div>
-    </header>
 
+        <div class="header-photo">
+            <img src="assets/images/pal-zsolt-portrait.jpg" alt="Pál Zsolt portréja" class="profile-img">
+        </div>
+    </div>
+</header>
     <main class="container">
 
         <section id="about" aria-labelledby="about-heading">
@@ -144,6 +149,25 @@
             <p class="a11y-note">Az oldal kialakítása során kiemelt szempont volt a W3C WCAG 2.1 szerinti akadálymentesíthetőség (A11y).</p>
         </div>
     </footer>
+    
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // E-mail maszkolás feloldása
+        const u = "zsolt.pal";
+        const d = "gmail.com";
+        const emailContainer = document.getElementById("email-protected");
+        if (emailContainer) {
+            emailContainer.innerHTML = `<a href="mailto:${u}@${d}">${u}@${d}</a>`;
+        }
 
+        // Telefon maszkolás feloldása
+        const p1 = "+36", p2 = "20", p3 = "220", p4 = "4427";
+        const phoneContainer = document.getElementById("phone-protected");
+        if (phoneContainer) {
+            phoneContainer.innerHTML = `<a href="tel:${p1}${p2}${p3}${p4}">${p1} ${p2} ${p3} ${p4}</a>`;
+        }
+    });
+</script>
+    
 </body>
 </html>
