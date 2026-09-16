@@ -84,6 +84,81 @@ header .tagline {
     max-width: 750px;
     margin-bottom: 1.5rem;
 }
+/* Fejléc Kétoszlopos Elrendezés */
+.header-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header-text {
+    flex: 1;
+}
+
+.profile-img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%; /* Elegáns, kerek profilkép */
+    object-fit: cover;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Mobilnézet beállítása */
+@media (max-width: 768px) {
+    .header-grid {
+        flex-direction: column-reverse; /* Mobilon a kép felülre kerül, a szöveg alá */
+        text-align: center;
+    }
+    
+    .contact-nav ul {
+        justify-content: center;
+    }
+
+    .profile-img {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+/* Fejléc Kétoszlopos Elrendezés */
+.header-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header-text {
+    flex: 1;
+}
+
+.profile-img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%; /* Elegáns, kerek profilkép */
+    object-fit: cover;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Mobilnézet beállítása */
+@media (max-width: 768px) {
+    .header-grid {
+        flex-direction: column-reverse; /* Mobilon a kép felülre kerül, a szöveg alá */
+        text-align: center;
+    }
+    
+    .contact-nav ul {
+        justify-content: center;
+    }
+
+    .profile-img {
+        width: 130px;
+        height: 130px;
+    }
+}
 
 /* --- 5. Kapcsolati Navigáció & Gombok --- */
 .contact-nav ul {
